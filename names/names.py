@@ -10,7 +10,7 @@ def part2(studentInstructorList):
             print str(lineNo), "-", listVal['first_name'], listVal['last_name'], "-",   str(len(listVal['first_name']) + len(listVal['last_name']))
             if lineNo == 4:
                 print "Instructors"
-                lineNo = 1
+                lineNo = 0
             lineNo+=1
 
 students = [
