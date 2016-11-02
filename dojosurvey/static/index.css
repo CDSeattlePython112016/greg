@@ -1,0 +1,47 @@
+#wrapper{
+  margin: 0 auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+form{
+  display: inline-block;
+  width: 375px;
+  height: 219px;
+  border: 1px solid black;
+  padding: 20px 0 0 0;
+}
+#form_left{
+  display: inline-block;
+  width: 160px;
+  vertical-align: top;
+  text-align: left;
+  /*border: 1px solid black;*/
+}
+#form_right{
+  display: inline-block;
+  width: 187px;
+  vertical-align: top;
+  text-align: right;
+  /*border: 1px solid black;*/
+}
+label{
+  display: block;
+  margin-top: 10px;
+}
+#form_right input{
+  margin-top: 8px;
+  width: 180px;
+}
+select{
+  margin-top: 9px;
+  width: 184px;
+}
+textarea{
+  display: block;
+  margin-left: 10px;
+  width: 349px;
+  height: 50px;
+}
+[name="submit"]{
+  margin: 5px 0 0 297px;
+}

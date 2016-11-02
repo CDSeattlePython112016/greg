@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css')}}">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h4>Submitted Info</h4>
+      <div id="info_left">
+        <label>Name:</label>
+        <label>Location:</label>
+        <label>Favorite Language:</label>
+        <label>Comments</label>
+      </div><!-- info_left end -->
+      <div id="info_right">
+        <p>{{resname}}</p>
+        <p>{{resloc}}</p>
+        <p>{{reslang}}</p>
+        <p>{{rescom}}</p>
+      </div><!-- info_right end -->
+      <form action="/" method="post">
+        <button type="submit" name="button">Go Back</button>
+      </form>
+    </div><!-- wrapper end -->
+  </body>
+</html>

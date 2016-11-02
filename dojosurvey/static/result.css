@@ -1,0 +1,35 @@
+#wrapper{
+  font-family: sans-serif;
+  margin: auto;
+  width: 375px;
+  height: 219px;
+  border: 1px solid black;
+}
+#info_left{
+  vertical-align: top;
+  text-align: left;
+  width: 158px;
+  height: 100px;
+  display: inline-block;
+}
+#info_left label{
+  display: block;
+  margin-left: 20px;
+}
+#info_right{
+  vertical-align: top;
+  text-align: right;
+  width: 150px;
+  height: 100px;
+  display: inline-block;
+}
+h4{
+  text-decoration: underline;
+  margin-left: 10px;
+}
+p{
+  margin: 0 0 0 0;
+}
+button{
+  margin: 0 0 0 250px;
+}
