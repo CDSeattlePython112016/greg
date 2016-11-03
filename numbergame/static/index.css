@@ -1,0 +1,11 @@
+#wrapper{
+  text-align: center;
+  font-family: sans-serif;
+}
+input{
+  width: 20px;
+  text-align: center;
+}
+h2{
+  /*display=none;*/
+}
