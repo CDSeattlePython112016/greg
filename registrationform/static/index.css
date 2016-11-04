@@ -1,0 +1,23 @@
+#wrapper{
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+input{
+  margin: 0 0 10px 0;
+}
+form{
+  width: 200px;
+  text-align: left;
+}
+#messageBox{
+  height: 95px;
+  width: 174px;
+  color: red;
+  overflow: auto;
+  font-size: 8pt;
+}
+p{
+  margin: 5px 0;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css')}}">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="messageBox">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <p>{{message}}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+      </div><!-- messageBox end -->
+      <form action="/process" method="post">
+        Email: <input type="text" name="email" value="{{session['email']}}">
+        First Name: <input type="text" name="firstname" value="{{session['firstname']}}">
+        Last Name: <input type="text" name="lastname" value="{{session['lastname']}}">
+        Birth Date: <input type="date" name="birthdate" value="{{session['birthdate']}}">
+        Password: <input type="password" name="password" value="">
+        Confirm Password: <input type="password" name="passwordcfm" value="">
+        <button type="submit" name="submit">Submit</button>
+      </form>
+    </div><!-- wrapper end -->
+  </body>
+</html>
