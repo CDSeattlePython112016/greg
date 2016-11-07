@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja</title>
+  </head>
+  <body>
+    {% if group==True %}
+    <img src="{{ url_for('static', filename='img/tmnt.png') }}" alt="">
+    {% else %}
+      {% if color=='blue' %}
+      <img src="{{ url_for('static', filename='img/leonardo.jpg') }}" alt="">
+      {% elif color=='orange' %}
+      <img src="{{ url_for('static', filename='img/michelangelo.jpg') }}" alt="">
+      {% elif color=='red' %}
+      <img src="{{ url_for('static', filename='img/raphael.jpg') }}" alt="">
+      {% elif color=='purple' %}
+      <img src="{{ url_for('static', filename='img/donatello.jpg') }}" alt="">
+      {% else %}
+      <img src="{{ url_for('static', filename='img/notapril.jpg') }}" alt="">
+      {% endif %}
+    {% endif %}
+  </body>
+</html>
