@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Survey Index</title>
+    {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'dojosurvey/css/result.css' %}">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h4>Submitted Info</h4>
+      <div id="info_left">
+        <label>Name:</label>
+        <label>Location:</label>
+        <label>Favorite Language:</label>
+        <label>Comments</label>
+      </div><!-- info_left end -->
+      <div id="info_right">
+        <p>{{request.session.name}}</p>
+        <p>{{request.session.location}}</p>
+        <p>{{request.session.languages}}</p>
+        <p>{{request.session.comments}}</p>
+      </div><!-- info_right end -->
+      <form action="/" method="post">
+        {% csrf_token %}
+        <button type="submit" name="button">Go Back</button>
+      </form>
+    </div><!-- wrapper end -->
+  </body>
+</html>
