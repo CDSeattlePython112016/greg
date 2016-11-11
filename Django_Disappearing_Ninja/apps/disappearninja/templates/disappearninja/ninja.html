@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja</title>
+    {% load staticfiles %}
+      <!-- <link rel="stylesheet" href="{% static 'rndwordgen/css/index.css' %}"> -->
+  </head>
+  <body>
+    {% if group %}
+    <img src="{% static "disappearninja/img/tmnt.png" %}" alt="">
+    {% else %}
+      {% if color == 'blue' %}
+      <img src="{% static "disappearninja/img/leonardo.jpg" %}" alt="">
+      {% elif color == 'orange' %}
+      <img src="{% static "disappearninja/img/michelangelo.jpg" %}" alt="">
+      {% elif color == 'red' %}
+      <img src="{% static "disappearninja/img/raphael.jpg" %}" alt="">
+      {% elif color == 'purple' %}
+      <img src="{% static "disappearninja/img/donatello.jpg" %}" alt="">
+      {% else %}
+      <img src="{% static "disappearninja/img/notapril.jpg" %}" alt="">
+      {% endif %}
+    {% endif %}
+  </body>
+</html>
