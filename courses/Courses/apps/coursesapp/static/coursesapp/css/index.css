@@ -1,0 +1,31 @@
+#wrapper{
+  font-family: sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  width: 900px;
+}
+#add_box_left{
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+}
+#add_box_right{
+  vertical-align: top;
+  display: inline-block;
+  text-align: right;
+}
+input, textarea{
+  display: block;
+}
+textarea{
+  /*margin: 0 0 0 10px;*/
+  margin: 0;
+  width: 167px;
+}
+p{
+  margin: 0 0 7px 0;
+}
+table{
+  border: 1px solid black;
+  display: inline-block;
+}

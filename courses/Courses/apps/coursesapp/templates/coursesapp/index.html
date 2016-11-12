@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Courses</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'coursesapp/css/index.css' %}">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h3>Add a new course</h3>
+      <div id="add_box_left">
+        <p>Name:</p>
+        <p>Description:</p>
+      </div><!--add_box_left end -->
+      <div id="add_box_right">
+        <form action="#" method="post">
+          <input type="text" name="name" value="">
+          <textarea name="description"></textarea>
+          <button type="submit" name="button">Add Course</button>
+        </form>
+      </div><!-- add_box_right end -->
+      <h3>Courses</h3>
+      <table>
+        <tr>
+          <th>Course Name</th>
+          <th>Description</th>
+          <th>Date Added</th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="#">Remove</a></td>
+        </tr>
+      </table>
+    </div><!-- wrapper end -->
+  </body>
+</html>
