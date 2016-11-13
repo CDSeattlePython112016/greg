@@ -14,18 +14,33 @@
   display: inline-block;
   text-align: right;
 }
-input, textarea{
+input{
   display: block;
+  width: 167px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
 }
 textarea{
-  /*margin: 0 0 0 10px;*/
-  margin: 0;
+  display: block;
   width: 167px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
 }
 p{
-  margin: 0 0 7px 0;
+  margin: 0 0 5px 0;
 }
 table{
   border: 1px solid black;
   display: inline-block;
+}
+a{
+  font-size: 10pt;
+}
+th{
+  text-align: left;
+}
+td{
+  font-size: 10pt;
 }

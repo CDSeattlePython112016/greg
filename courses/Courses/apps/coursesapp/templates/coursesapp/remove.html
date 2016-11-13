@@ -5,6 +5,11 @@
     <title>Remove Course</title>
   </head>
   <body>
+    <h3>Are you sure you want to delete the below course:</h3>
+    <p>Name: <p>{{remove_course.name}}</p></p>
+    <p>Description: <p>{{remove_course.description}}</p></p>
+    <a href="/"><button type="button" name="cancel">Cancel</button></a>
+    <a href="delete/{{remove_course.id}}"><button type="button" name="delete">Delete Course: {{remove_course.id}}</button></a>
 
   </body>
 </html>

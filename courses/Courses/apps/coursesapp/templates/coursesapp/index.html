@@ -14,7 +14,8 @@
         <p>Description:</p>
       </div><!--add_box_left end -->
       <div id="add_box_right">
-        <form action="#" method="post">
+        <form action="add" method="post">
+          {% csrf_token %}
           <input type="text" name="name" value="">
           <textarea name="description"></textarea>
           <button type="submit" name="button">Add Course</button>
@@ -28,12 +29,14 @@
           <th>Date Added</th>
           <th>Actions</th>
         </tr>
+        {% for course in courses %}
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><a href="#">Remove</a></td>
+          <td>{{course.name}}</td>
+          <td>{{course.description}}</td>
+          <td>{{course.created_at}}</td>
+          <td><a href='remove/{{course.id}}'>Remove</a></td>
         </tr>
+        {% endfor %}
       </table>
     </div><!-- wrapper end -->
   </body>
