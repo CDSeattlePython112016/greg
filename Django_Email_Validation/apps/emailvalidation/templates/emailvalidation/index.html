@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Django Email Validation</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'emailvalidation/css/index.css' %}">
+  </head>
+  <body>
+    <div id="wrapper">
+      <form action="sub/" method="post">
+        {% csrf_token %}
+        <p>Email address: <input type="text" name="email" value=""></p>
+        <button type="submit" name="submit">Submit</button>
+      </form>
+      {% if messages %}
+      {% for message in messages %}
+      <h4>{{message}}</h4>
+      {% endfor %}
+      {% endif %}
+    </div><!-- wrapper end -->
+  </body>
+</html>
