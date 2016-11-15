@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Courses</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'coursesapp/css/index.css' %}">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h3>Add a new course</h3>
+      <div id="add_box_left">
+        <p>Name:</p>
+        <p>Description:</p>
+      </div><!--add_box_left end -->
+      <div id="add_box_right">
+        <form action="add" method="post">
+          {% csrf_token %}
+          <input type="text" name="name" value="">
+          <textarea name="description"></textarea>
+          <button type="submit" name="button">Add Course</button>
+        </form>
+      </div><!-- add_box_right end -->
+      <h3>Courses</h3>
+      <table>
+        <tr>
+          <th>Course Name</th>
+          <th>Description</th>
+          <th>Date Added</th>
+          <th>#Users</th>
+          <th>Actions</th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+          <td>{{course.name}}</td>
+          <td>{{course.description}}</td>
+          <td>{{course.created_at}}</td>
+          <td>{{course.userskey.count}}</td>
+          <td><a href='remove/{{course.id}}'>Remove</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+      <div id="add_users">
+        <form action="{% url 'courses:usertocourse' %}" method="post">
+          {% csrf_token %}
+          <select name="user_id">
+            {% for user in users %}
+            <option value="{{user.id}}">{{user.id}}</option>
+            {% endfor %}
+          </select>
+          <select name="course_id">
+            {% for course in courses %}
+            <option value="{{course.id}}">{{course.name}}</option>
+            {% endfor %}
+          </select>
+          <button type="submit" name="add_user_to_course">Add user to course</button>
+        </form>
+
+      </div><!-- add_users end -->
+    </div><!-- wrapper end -->
+  </body>
+</html>

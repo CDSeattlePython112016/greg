@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Course ID</th>
+    <th>Course Title</th>
+    <th># Users</th>
+  </tr>
+  {% for course in courses %}
+  <tr>
+    <td>{{course.id}}</td>
+    <td>{{course.name}}</td>
+    <td>{{course.userskey.count}}</td>
+  </tr>
+  {% endfor %}
+</table>

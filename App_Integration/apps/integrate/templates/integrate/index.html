@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>App Integration</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'integrate/css/index.css' %}">
+  </head>
+  <body>
+    <div id='header'>
+      <div id='header_left'>
+        <p id='time'>{{now}}</p>
+        <a href='timedisplay/'>Original</a>
+      </div><!--'header_left'end -->
+      <h2>App Integration</h2>
+      <div id='header_right'>
+        <p id='word'>{{word}}<p>Attempt# {{request.session.counter}}</p></p>
+        <a href='randomword/'>Original</a>
+      </div><!-- header_right end -->
+    </div><!-- header end -->
+    <!-- <p>|</p> -->
+    <a href="loginreg/">Login/Register</a>
+    <a href="courses/">Go to Courses</a>
+    <a href="djangogold/">Play Django Gold</a>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+#wrapper{
+  font-family: sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  width: 900px;
+}
+#add_box_left{
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+}
+#add_box_right{
+  vertical-align: top;
+  display: inline-block;
+  text-align: right;
+}
+input{
+  display: block;
+  width: 167px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+}
+textarea{
+  display: block;
+  width: 167px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+}
+p{
+  margin: 0 0 5px 0;
+}
+table{
+  border: 1px solid black;
+  display: inline-block;
+}
+a{
+  font-size: 10pt;
+}
+th{
+  text-align: left;
+}
+td{
+  font-size: 10pt;
+}
+#add_users{
+  text-align: center;
+  /*display: inline-block;*/
+}
+#add_users a{
+  display: block;
+}
