@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create a new product | Semi RESTFul Routes</title>
+  </head>
+  <body>
+    <h3>Add a product</h3>
+    <form action="/create" method="post">
+      {% csrf_token %}
+      <p>Name: <input type="text" name="name" value=""></p>
+      <p>Description: <input type="text" name="description" value=""></p>
+      <p>Price: <input type="text" name="price" value=""></p>
+      <button type="submit" name="create">Create</button>
+    </form>
+    <a href="/">Back</a>
+  </body>
+</html>
